@@ -261,29 +261,25 @@ textarea {
   }
 }
 
+/* --- My stuff --- */
+
 * {
   box-sizing: border-box;
-  margin: 0;
-  padding: 0;
 }
 
-body {
-  overflow-y: hidden;
-}
-
-.slider {
+html {
   font-family: sans-serif;
-  -ms-scroll-snap-type: x mandatory;
-      scroll-snap-type: x mandatory;
-  display: flex;
-  -webkit-overflow-scrolling: touch;
-  overflow-x: scroll;
+  -ms-scroll-snap-type: mandatory;
+      scroll-snap-type: mandatory;
+  -ms-scroll-snap-points-y: repeat(100vh);
+      scroll-snap-points-y: repeat(100vh);
+  -ms-scroll-snap-type: y mandatory;
+      scroll-snap-type: y mandatory;
 }
 
 section {
-  border-right: 1px solid white;
+  border-bottom: 1px solid white;
   padding: 1rem;
-  min-width: 100vw;
   height: 100vh;
   scroll-snap-align: start;
   text-align: center;
