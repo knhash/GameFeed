@@ -32,6 +32,21 @@ body {
   height: 100%;
   scroll-snap-align: start;
   padding: 0;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.game-card:hover {
+  background-color: #f9f9f9;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.game-title {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
 }
 
 iframe {
@@ -43,6 +58,11 @@ iframe {
   background: white;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   border-radius: 10px;
+  transition: box-shadow 0.3s ease;
+}
+
+iframe:hover {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
 }
 
 .next-button {
@@ -56,6 +76,12 @@ iframe {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   font-family: 'Courier New', Courier, monospace;
   text-transform: uppercase;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.next-button:hover {
+  background-color: #eee;
+  border-color: #bbb;
 }
 
 .instructions {
