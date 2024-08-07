@@ -35,9 +35,16 @@ const init = function() {
         const gameCard = document.createElement("div");
         gameCard.className = "game-card";
         gameCard.style.backgroundColor = randomColor();
-        gameCard.innerHTML = `
-            <iframe src="${shuffledUrls[currentIndex]}" title="Game ${currentIndex + 1}"></iframe>
-        `;
+
+        const iframe = document.createElement("iframe");
+        iframe.src = shuffledUrls[currentIndex];
+        iframe.title = `Game ${currentIndex + 1}`;
+        iframe.onload = () => {
+            // Attempt to focus the iframe to ensure interaction
+            iframe.focus();
+        };
+
+        gameCard.appendChild(iframe);
         gameFeed.appendChild(gameCard);
 
         currentIndex = (currentIndex + 1) % shuffledUrls.length;
