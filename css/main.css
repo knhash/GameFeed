@@ -4,14 +4,13 @@ html, body {
   height: 100%;
   font-family: sans-serif;
   background: #f0f0f0;
-  scroll-behavior: smooth;
-  overflow-y: scroll;
 }
 
 body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  overflow-y: hidden; /* Prevent vertical scrolling */
 }
 
 .game-feed {
@@ -20,6 +19,7 @@ body {
   align-items: center;
   width: 100%;
   scroll-snap-type: y mandatory;
+  overflow-y: auto; /* Allow scrolling within the game-feed */
 }
 
 .game-card {
